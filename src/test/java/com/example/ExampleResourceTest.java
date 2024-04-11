@@ -20,7 +20,7 @@ class ExampleResourceTest {
 //        String authClientSecret = System.getenv("AUTH_CLIENT_SECRET");
         System.out.println("AUTH_CLIENT_SECRET: " + authClientSecret); // Print the value
 
-        if(authClientSecret.equals("TTTTTTT")){
+        if(authClientSecret.equals("HELLO")){
             throw new RuntimeException();
         }
         given()
