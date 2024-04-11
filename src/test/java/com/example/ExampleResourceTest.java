@@ -31,7 +31,7 @@ class ExampleResourceTest {
 //        }
 
         if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
-            System.out.println("SUCCESSS333");
+            throw new RuntimeException();
         }
         if (authClientSecret.equals("TTTTTTT")) {//threw an error so indeed HELLO got picked
             System.out.println("tttttttttt");
