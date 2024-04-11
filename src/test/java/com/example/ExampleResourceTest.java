@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.is;
 class ExampleResourceTest {
 
     @Inject
-    @ConfigProperty(name = "AUTH_CLIENT_SECRET")
+    @ConfigProperty(name = "auth.client.secret")
     String authClientSecret;
     @Inject
     @ConfigProperty(name = "AUTH_ID")
@@ -32,6 +32,9 @@ class ExampleResourceTest {
 
         if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
             System.out.println("SUCCESSS333");
+        }
+        if (authClientSecret.equals("TTTTTTT")) {//threw an error so indeed HELLO got picked
+            System.out.println("tttttttttt");
         }
         given()
                 .when().get("/hello")
