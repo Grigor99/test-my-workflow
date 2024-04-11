@@ -31,10 +31,10 @@ class ExampleResourceTest {
 //        }
 
         if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
-            throw new RuntimeException();
+            System.out.println("HHHHHHHHHH");
         }
         if (authClientSecret.equals("TTTTTTT")) {//threw an error so indeed HELLO got picked
-            System.out.println("tttttttttt");
+            System.out.println("TTTTTT");
         }
         given()
                 .when().get("/hello")
