@@ -1,6 +1,8 @@
 package com.example;
 
 import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -9,12 +11,16 @@ import static org.hamcrest.CoreMatchers.is;
 @QuarkusTest
 class ExampleResourceTest {
 
+    @Inject
+    @ConfigProperty(name = "AUTH_CLIENT_SECRET")
+    String authClientSecret;
+
     @Test
     void testHelloEndpoint() {
-        String authClientId = System.getenv("AUTH_CLIENT_SECRET");
-        System.out.println("AUTH_CLIENT_SECRET: " + authClientId); // Print the value
+//        String authClientSecret = System.getenv("AUTH_CLIENT_SECRET");
+        System.out.println("AUTH_CLIENT_SECRET: " + authClientSecret); // Print the value
 
-        if(!authClientId.equals("HELLO")){
+        if(authClientSecret.equals("TTTTTTT")){
             throw new RuntimeException();
         }
         given()
