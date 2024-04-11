@@ -22,13 +22,10 @@ class ExampleResourceTest {
     @Test
     void testHelloEndpoint() {
 //        String authClientSecret = System.getenv("AUTH_CLIENT_SECRET");
-        System.out.println("AUTH_CLIENT_SECRET: " + authClientSecret); // Print the value
         if (AUTH_ID.equals("11")) {
             System.out.println("GGGGGGG");
         }
-//        if(authClientSecret.equals("HELLO")){//threw an error so indeed HELLO got picked
-//            throw new RuntimeException();
-//        }
+
 
         if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
             System.out.println("HHHHHHHHHH");
