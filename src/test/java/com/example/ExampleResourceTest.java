@@ -14,7 +14,7 @@ class ExampleResourceTest {
         String authClientId = System.getenv("AUTH_CLIENT_SECRET");
         System.out.println("AUTH_CLIENT_SECRET: " + authClientId); // Print the value
 
-        if(authClientId.equals("HELLO")){
+        if(authClientId.equals("HELLO22")){
             System.out.println("SUCCESS2024");
         }
         given()
