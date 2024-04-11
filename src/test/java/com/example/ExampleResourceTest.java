@@ -14,25 +14,30 @@ class ExampleResourceTest {
     @Inject
     @ConfigProperty(name = "AUTH_CLIENT_SECRET")
     String authClientSecret;
+    @Inject
+    @ConfigProperty(name = "AUTH_ID")
+    String AUTH_ID;
 
 
     @Test
     void testHelloEndpoint() {
 //        String authClientSecret = System.getenv("AUTH_CLIENT_SECRET");
         System.out.println("AUTH_CLIENT_SECRET: " + authClientSecret); // Print the value
-
+        if (AUTH_ID.equals("11")) {
+            System.out.println("GGGGGGG");
+        }
 //        if(authClientSecret.equals("HELLO")){//threw an error so indeed HELLO got picked
 //            throw new RuntimeException();
 //        }
 
-        if(authClientSecret.equals("HELLO")){//threw an error so indeed HELLO got picked
+        if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
             System.out.println("SUCCESSS333");
         }
         given()
-          .when().get("/hello")
-          .then()
-             .statusCode(200)
-             .body(is("Hello from Quarkus REST"));
+                .when().get("/hello")
+                .then()
+                .statusCode(200)
+                .body(is("Hello from Quarkus REST"));
     }
 
 }
