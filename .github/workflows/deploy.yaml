@@ -20,7 +20,6 @@ jobs:
 
       - name: Set environment variables and run Quarkus
         env:
-          AUTH_CLIENT_ID: ${{ secrets.AUTH_CLIENT_ID }}
           AUTH_CLIENT_SECRET: ${{ secrets.AUTH_CLIENT_SECRET }}
         run: |
           ./mvnw test

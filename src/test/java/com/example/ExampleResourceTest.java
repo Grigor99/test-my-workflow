@@ -8,8 +8,12 @@ import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 class ExampleResourceTest {
+
     @Test
     void testHelloEndpoint() {
+        String authClientId = System.getenv("AUTH_CLIENT_SECRET");
+        System.out.println("AUTH_CLIENT_SECRET: " + authClientId); // Print the value
+
         given()
           .when().get("/hello")
           .then()
