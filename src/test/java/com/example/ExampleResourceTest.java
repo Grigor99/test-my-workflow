@@ -15,6 +15,7 @@ class ExampleResourceTest {
     @ConfigProperty(name = "AUTH_CLIENT_SECRET")
     String authClientSecret;
 
+
     @Test
     void testHelloEndpoint() {
 //        String authClientSecret = System.getenv("AUTH_CLIENT_SECRET");
