@@ -27,6 +27,7 @@ class ExampleResourceTest {
         }
 
 
+
         if (authClientSecret.equals("HELLO")) {//threw an error so indeed HELLO got picked
             System.out.println("HHHHHHHHHH");
         }
